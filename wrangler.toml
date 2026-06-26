@@ -1,0 +1,15 @@
+# name можно ввести любой другой, главное не лепить горбатого
+name = "trader-journal"
+main = "src/index.js"
+compatibility_date = "2024-06-01"
+
+# KV namespace for OHLC request queuing and caching
+# Create with: wrangler kv namespace create OHLC_KV
+# Then paste the id below
+ kv_namespaces = [
+   { binding = "OHLC_KV", id = "" }
+ ]
+
+[vars]
+CORS_ORIGIN = "https://skifak.github.io/Trade-Journal-Site"
+
